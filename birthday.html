@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Maya 💖</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background: linear-gradient(135deg,#ff9eb5,#ffc7d7,#ffe6ee);
+position:relative;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:absolute;
+color:white;
+font-size:20px;
+animation:float 8s linear infinite;
+opacity:0.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(0.5);
+opacity:0;
+}
+50%{
+opacity:0.8;
+}
+100%{
+transform:translateY(-10vh) scale(1.2);
+opacity:0;
+}
+}
+
+/* Login Box */
+
+.container{
+width:350px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+border:1px solid rgba(255,255,255,0.3);
+z-index:10;
+}
+
+h1{
+color:white;
+margin-bottom:10px;
+font-size:30px;
+}
+
+.subtitle{
+color:white;
+margin-bottom:25px;
+font-size:14px;
+opacity:0.9;
+}
+
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+outline:none;
+border-radius:15px;
+font-size:15px;
+background:rgba(255,255,255,0.8);
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:15px;
+background:#ff4f81;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:10px;
+transition:0.3s;
+font-weight:bold;
+}
+
+button:hover{
+background:#ff2e6d;
+transform:scale(1.03);
+}
+
+#msg{
+margin-top:15px;
+color:white;
+font-size:14px;
+}
+
+#secret{
+display:none;
+margin-top:25px;
+animation:fadeIn 1s ease;
+}
+
+.secretText{
+color:white;
+font-size:18px;
+line-height:1.8;
+font-weight:500;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+
+<div class="heart" style="left:10%; animation-delay:0s;">💖</div>
+<div class="heart" style="left:20%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:35%; animation-delay:4s;">💗</div>
+<div class="heart" style="left:50%; animation-delay:1s;">💞</div>
+<div class="heart" style="left:65%; animation-delay:3s;">💖</div>
+<div class="heart" style="left:80%; animation-delay:5s;">💕</div>
+
+<!-- Login Box -->
+
+<div class="container">
+
+<h1>For Maya 💖</h1>
+<p class="subtitle">Unlock your surprise ✨</p>
+
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="checkLogin()">Unlock 💌</button>
+
+<p id="msg"></p>
+
+<div id="secret">
+
+<p class="secretText">
+ma chu tmrai sath ma.. 💖<br><br>
+
+timi sangai hunchu sadhai..  
+sangai uthcham ra sangai sutcham.. ✨<br><br>
+
+timi sangai chu ra hasdai basirako chu..  
+tmrai wori pari chuu ra sadhai hasdai chu.. 🌸<br><br>
+
+ko ho ma? 👀
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function checkLogin(){
+
+let u = document.getElementById("user").value;
+let p = document.getElementById("pass").value;
+
+if(u === "modita" && p === "17oct"){
+
+document.getElementById("secret").style.display = "block";
+document.getElementById("msg").innerHTML = "Unlocked 💖";
+
+}else{
+
+document.getElementById("msg").innerHTML = "Wrong login 😭";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
